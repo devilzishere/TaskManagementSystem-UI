@@ -1,0 +1,12 @@
+<form (ngSubmit)="createTask()" name="createTask">
+    <label for="name">Task Name:</label>
+    <input type="text" id="name" [(ngModel)]="newTask.name" required [ngModelOptions]="{standalone: true}">
+
+    <label for="description">Description:</label>
+    <textarea id="description" [(ngModel)]="newTask.description" required [ngModelOptions]="{standalone: true}"></textarea>
+
+    <label for="dueDate">Due Date:</label>
+    <input type="date" id="dueDate" [(ngModel)]="newTask.dueDate" required [ngModelOptions]="{standalone: true}">
+
+    <button type="submit">Create Task</button>
+</form>

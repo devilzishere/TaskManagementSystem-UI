@@ -1,0 +1,7 @@
+<div *ngFor="let task of tasks">
+    <h3>{{ task.name }}</h3>
+    <p>{{ task.description }}</p>
+    <p>Due Date: {{ task.dueDate | date }}</p>
+    <button (click)="editTask(task)">Edit</button>
+</div>
+<a routerLink="/create">Create Task</a>
